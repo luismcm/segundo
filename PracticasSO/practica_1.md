@@ -38,3 +38,20 @@
     groups nombre_usuario: informa de los grupos
     id user: muestra el numero identificador del usuario
     grpck: determina la consistncia del archivo de grupos
+
+### 4. tipos de archivos linux
+
+    /bin: programas de utilidad utilizados por cualquierusuario del sistema
+    /sbin: programas de utilidad usados por el root
+    /boot: archivos fundamentales para que funcione el boot loader
+    /dev: archivos especiales de dispositivo
+    /etc: archivos de configuración del sistema
+    /home: directorio personal
+    /lib: bibliotecas que necesitan los programas alojados en bin y sbin
+    /media:punto de montaje para dispositivos extraibles
+    /mnt: putto de montaje para dispositivos de manera temporal
+    /opt: se ubican los programas que no pertenecen a la distribución
+    /proc
+    /tmp
+    /usr
+    /var
