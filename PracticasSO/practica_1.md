@@ -34,3 +34,7 @@
     groupdel nombre_grupo: elimina un grupo
     newgrp nombre_grupo: cambia de grupo activo
     gpasswd nombre_grupo: añade una contraseña a un grupo
+        -a: añade un usuario al gruo en cuestión
+    groups nombre_usuario: informa de los grupos
+    id user: muestra el numero identificador del usuario
+    grpck: determina la consistncia del archivo de grupos
