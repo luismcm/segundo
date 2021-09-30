@@ -11,6 +11,10 @@
     - /etc/group : definicion de los grupos y sus miembros
 #### Órdenes para gestionar cuentas de usuario ##### 
     
+    useradd: crea un nuevo usuario
+        -g: especifica grupo
+        -G: especifica varios grupos
+        -M: crea un usuario pero sin el home
     usermod: modificacion de usuario
     userdel: eliminar usuario
     newusers: crea cuentas de usuario utilizando archivos escritos en formato de /etc/passwd
@@ -20,3 +24,13 @@
 
     .bash_profile: se ejecuta al hacer el login y en él podemos indicar alias, variables, configuración del entorno...
     .bashrc: su contenido se ejecuta cada vez que se ejecuta la consola en este archivo de indican los programas o scripts a ejecutar
+    .bash_logout: se ejecuta cuando ceerramos sesión. En él podemos especificar scripts, programas y acciones que deseemos ejecutar al cerrar sesión.
+    
+### 3.Gestión de grupos
+
+    groupadd nombre_grupo: añade un grupo
+    groupmod nombre_grupo: modifica un grupo existente
+        -Ej: groupmod -n nombreactual nuevonombre
+    groupdel nombre_grupo: elimina un grupo
+    newgrp nombre_grupo: cambia de grupo activo
+    gpasswd nombre_grupo: añade una contraseña a un grupo
