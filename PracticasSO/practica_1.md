@@ -1,5 +1,8 @@
 # Práctica 1
 
+#### 0. Arrancar maquina virtual de fedora
+    ./kernel32-3.0.4 ubda=./Fedora14-x86-root_fs mem=1024m
+
 #### 1. Obtención de permisos de root en máquina virtual 
     #!/bin/bash
     cd /etc && ./kernel32-3.0.4  ubda=./Fedora14-x86-root_fs mem=1024m
