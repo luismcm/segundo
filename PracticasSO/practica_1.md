@@ -51,7 +51,14 @@
     /media:punto de montaje para dispositivos extraibles
     /mnt: putto de montaje para dispositivos de manera temporal
     /opt: se ubican los programas que no pertenecen a la distribución
-    /proc
-    /tmp
-    /usr
-    /var
+    /proc: sistema de archivos virtual que hace de interfaz entre los procesos y los nucleos del procesador
+    /tmp: archivos temporales
+    /usr: programas y ejecutables del usuario
+    /var: donde se guardan los servicios tipo mysql, apache...
+    
+### 5. sistema de archivos
+
+    /etc/fstab: file systems table, muestra las particiones y sus sistemas de archivos
+    /etc/mtab: lista los sistemas de archivos ya montados
+    /proc/filesystems: muestran los tipos de sistemas de archivos existentes
+    /proc/mounts: sistemas de archivos que están monttados actualmente
