@@ -28,7 +28,15 @@
     .bash_profile: se ejecuta al hacer el login y en él podemos indicar alias, variables, configuración del entorno...
     .bashrc: su contenido se ejecuta cada vez que se ejecuta la consola en este archivo de indican los programas o scripts a ejecutar
     .bash_logout: se ejecuta cuando ceerramos sesión. En él podemos especificar scripts, programas y acciones que deseemos ejecutar al cerrar sesión.
-    
+
+##### Usuarios especiales del sistema
+
+    - root: administrador
+    - bin,daemon, lp,sync, shutdown... : para poseer y ejecutar servicios
+    - mail, news, ftp... : herramientas y utilidades
+    - mysql, xfs... : para ejecutar los servicios en cuestión
+    - nobody o nfsnobody: usada por NFS y otras utilidades
+
 ### 3.Gestión de grupos
 
     groupadd nombre_grupo: añade un grupo
@@ -41,6 +49,13 @@
     groups nombre_usuario: informa de los grupos
     id user: muestra el numero identificador del usuario
     grpck: determina la consistncia del archivo de grupos
+
+##### Grupos especiales
+
+    root,sys, bin,daemon, adm... :  preconfigurados por UNIX. Los GIDs inferiores a 500 estánreservados para estos grupos
+    tty, dialout, cdroom... : grupo para dispositivos
+    kernel: usuarios que pueden leer la memoria del kernel
+    users: para usuarios normales
 
 ### 4. tipos de archivos linux
 
