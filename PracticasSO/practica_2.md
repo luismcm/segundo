@@ -1,6 +1,6 @@
 # Práctica 2
 
-### Dispositivos loop
+## Dispositivos loop
 
 En sistemas operativos Unix-like, un loop device, vnd (vnode disk) o lofi (loop file interface) es un dispositivo virtual que hace que se pueda acceder a un fichero como un dispositivo de bloques.
 
@@ -54,10 +54,20 @@ Este tipo de archivos se usan a veces para almacenar imágenes ISO de discos y d
     
     mount device
     
+    
   Para configurar automáticamente el punto de montaje y el sistema de archivos de un dispositivo para que esté listo cuando se use el mount hay que editar 
   /etc/fstab. Que tiene el siguiente formato:
   
-  
+    /dev/dispositivo    /mnt/puntomontaje   SA  rw|ro,user|noauto   0 0
+    
+## Gestores de paquetes
+
+    yum list: lista paquetes disponibles para instalar
+    yum list installed: lista paquetes instalados
+    yum list updates: muestra todos los paquetes con actualizaciones disponibles
+    yum install nombre_paquete: instalar un paquete
+    yum update: actualiza todos los paquetes instalados
+    yum remove nombre_paquete: elimina un paquete
   
   
   
