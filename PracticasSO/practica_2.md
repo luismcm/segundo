@@ -38,3 +38,26 @@ Este tipo de archivos se usan a veces para almacenar imágenes ISO de discos y d
     fdisk /dev/loop0
     ...
  
+### 6. Creando un sistema de archivos
+
+    makefs -t "tipo_de_sistema" /dev/loop0p1
+    
+### 7. Comprobaciones tune2fs
+
+    tune2fs -l dispositivo: muestra por pantalla el contenido del superbloque
+    tune2fs -c max-mount-counts dispositivo: establece el numero de montajes máximos sin que se realice una comprobación del dispositivo
+    tune2fs -L label dispositivo: pone una etiqueta al sistema de archivos
+    
+### 8. Archivo fstab
+
+  Cuando tenemos un dispositivo, para usarlo debemos montarlo con la orden mount
+    
+    mount device
+    
+  Para configurar automáticamente el punto de montaje y el sistema de archivos de un dispositivo para que esté listo cuando se use el mount hay que editar 
+  /etc/fstab. Que tiene el siguiente formato:
+  
+  
+  
+  
+  
