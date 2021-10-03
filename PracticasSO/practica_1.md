@@ -80,3 +80,26 @@
     /etc/mtab: lista los sistemas de archivos ya montados
     /proc/filesystems: muestran los tipos de sistemas de archivos existentes
     /proc/mounts: sistemas de archivos que están monttados actualmente
+
+### 6. orden chage
+
+    chage -d ultimo_dia usuario: establece la fecha del último cambio de contraseña
+    chage -m min_dias usuario: numero de días mínimo para que el usuario cambie la contraseña
+    chage -M max_dias usuario: nº de días máximo que puede mantener la contraseña
+    chage -W warn_dias usuario: establece un aviso $warn_dias antes para que el usuario cambie la contraseña
+    chage -I inac_dias usuario: numero de días en el que la cuenta se inhabilitará de no haberse cambiado la contraseña
+    chage -E exp_días usuario : fecha en el que la cuenta expira y se deshabilita de forma automática
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
