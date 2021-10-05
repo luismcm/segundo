@@ -69,5 +69,21 @@ Este tipo de archivos se usan a veces para almacenar imágenes ISO de discos y d
     yum update: actualiza todos los paquetes instalados
     yum remove nombre_paquete: elimina un paquete
   
-  
+#### Gestor de paquetes rpm  
+
+    rpm -i paquete: instala un paquete
+    rpm -e paquete: elimina un paquete
+    rpm -U paquete: actualiza un paquete y elimina el anterior
+    rpm -F nombre_servidor_http/ftp: se busca el paque en un servidor y se prepara la actualizacion
+    rpm -qa | grep paquete | sort: busca información de un paquete
+    rpm -qi paquete: muestra información de un paquete
+    rpm -V paquete: verifica la integridad de un paquete
+    
+    
+    
+    
+    
+    
+    
+    
   
