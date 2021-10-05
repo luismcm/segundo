@@ -79,10 +79,15 @@ Este tipo de archivos se usan a veces para almacenar imágenes ISO de discos y d
     rpm -qi paquete: muestra información de un paquete
     rpm -V paquete: verifica la integridad de un paquete
     
-    
-    
-    
-    
+
+## Cuotas
+
+Existe una forma más flexible de limitar el uso de disco por parte de los usuarios del sistema. Este control se lleva a cabo mediante un sistema de
+cuotas. Las cuotas de disco permiten limitar el número de recursos de un SA que va a poder utilizar un usuario. 
+
+- Límite hard
+- Límite soft
+
     
     
     
