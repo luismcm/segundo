@@ -69,7 +69,7 @@ Este tipo de archivos se usan a veces para almacenar imágenes ISO de discos y d
     yum update: actualiza todos los paquetes instalados
     yum remove nombre_paquete: elimina un paquete
   
-#### Gestor de paquetes rpm  
+### Gestor de paquetes rpm  
 
     rpm -i paquete: instala un paquete
     rpm -e paquete: elimina un paquete
