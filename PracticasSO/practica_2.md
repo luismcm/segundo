@@ -86,8 +86,19 @@ Existe una forma más flexible de limitar el uso de disco por parte de los usuar
 cuotas. Las cuotas de disco permiten limitar el número de recursos de un SA que va a poder utilizar un usuario. 
 
 - Límite hard: El usuario no puede sobrepasarlo
-- Límite soft:  Siempre debe configurarse como un número de recursos inferior al límitehard y se puede sobrepasar durante cierto tiempo, pero sin llegar a superar al límite hard. Transcurrido el tiempo que estipule el administrador para poder estar por encima del límite soft, el sistema de cuotas actúa como si se hubiese superado el límite hard . Este tiempo durante el cual se puede superar el límite soft se conoce con el nombre de periodo de gracia.
+- Límite soft:  Siempre debe configurarse como un número de recursos inferior al límite hard y se puede sobrepasar durante cierto tiempo, pero sin llegar a superar al límite hard. Transcurrido el tiempo que estipule el administrador para poder estar por encima del límite soft, el sistema de cuotas actúa como si se hubiese superado el límite hard . Este tiempo durante el cual se puede superar el límite soft se conoce con el nombre de periodo de gracia.
 
+
+### 1. Sistemas de quotas para el sistema de cuotas
+
+    -Primero editamos /etc/fstab y añadimos en en pass usrquota/grpquota para añadir la funcionalidad de cuotas a un sistema de archivos
+    -Montamos de nuevo el SA mount -o remount punto_montaje
+    -Creamos el archivo aquota.user para llevar el control de las cuotas en el SA: quotacheck -nm punto_montaje
+    -Encendemos el sistema de quotas: quotaon -a
+    -Editamos la cuota para un usuario: edquota username
+    -Establecemos el límite del periodo de gracia: edquota -t username
+    -Miramos las estadíasticas de las cuotas para todos los usuarios: repquota <SA>
+    
     
     
     
