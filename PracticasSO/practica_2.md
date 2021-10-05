@@ -85,8 +85,8 @@ Este tipo de archivos se usan a veces para almacenar imágenes ISO de discos y d
 Existe una forma más flexible de limitar el uso de disco por parte de los usuarios del sistema. Este control se lleva a cabo mediante un sistema de
 cuotas. Las cuotas de disco permiten limitar el número de recursos de un SA que va a poder utilizar un usuario. 
 
-- Límite hard
-- Límite soft
+- Límite hard: El usuario no puede sobrepasarlo
+- Límite soft:  Siempre debe configurarse como un número de recursos inferior al límitehard y se puede sobrepasar durante cierto tiempo, pero sin llegar a superar al límite hard. Transcurrido el tiempo que estipule el administrador para poder estar por encima del límite soft, el sistema de cuotas actúa como si se hubiese superado el límite hard . Este tiempo durante el cual se puede superar el límite soft se conoce con el nombre de periodo de gracia.
 
     
     
