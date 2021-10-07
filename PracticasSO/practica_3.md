@@ -9,7 +9,7 @@
 
 ## 1. Orden uptime
 
-  uptime: muestra hora, tiempo que lleva encendido, nº usuarios, carga media del sistema los ultimos 1, 5 y 15 minutos
-  w: uptime pero más detallado
+    uptime: muestra hora, tiempo que lleva encendido, nº usuarios, carga media del sistema los ultimos 1, 5 y 15 minutos
+    w: uptime pero más detallado
   
  La carga normal de un sistema multicure es nº cores*1
