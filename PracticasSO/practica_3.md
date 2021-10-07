@@ -50,6 +50,6 @@ La orden nice altera el valor de prioridad por defecto de un proceso (heredado p
 
         script.sh &
     
-    
+- 
 
 
