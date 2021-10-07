@@ -20,7 +20,7 @@ La orden time mide el tiempo de ejecución de un programa, el tiempo usado por e
 
     time nombre_programa => t.espera = t.real - t.user -t.sys
     
-# 3. Orden nice
+## 3. Orden nice
 
 La orden nice altera el valor de prioridad por defecto de un proceso (heredado por su proceso padre). Acepta los valores desde el intervalo -20 al 19
 
@@ -46,10 +46,11 @@ La orden nice altera el valor de prioridad por defecto de un proceso (heredado p
             echo $a
         done
 
-- Running script in background
+- Running script in background with priority
 
-        script.sh &
+        sh ./ejercicio.sh num_veces 1000000 &
     
-- 
+## 4. Orden pstree
+
 
 
