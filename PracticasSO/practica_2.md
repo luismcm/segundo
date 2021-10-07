@@ -27,7 +27,7 @@ Este tipo de archivos se usan a veces para almacenar imágenes ISO de discos y d
 
 ### 3. Asociamos los dispositivos virtuales a los archivos que describirán la partición
 
-    losetup /dev/loop?/archivo_SA?0
+    losetup /dev/loop? /root/archivo_SA?0
 
 ### 4. Comprobamos las tablas de particiones
 
