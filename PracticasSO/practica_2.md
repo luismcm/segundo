@@ -13,8 +13,8 @@ Este tipo de archivos se usan a veces para almacenar imágenes ISO de discos y d
     mknod /dev/loop? {b|c} major minor
     b: block device
     c: character device
-    major: major number of the device file
-    minor: minor number of the device file
+    major: major number of the device file => 7 (tipo bloque)
+    minor: minor number of the device file => ? (nº de dispositivo loop)
   
 ### 2. Creando un archivo de 20 MB y otro de 30MB en el sistema de archivos
 
