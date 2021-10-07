@@ -13,3 +13,10 @@
     w: uptime pero más detallado
   
  La carga normal de un sistema multicure es nº cores*1
+ 
+## 2. Orden time
+
+La orden time mide el tiempo de ejecución de un programa, el tiempo usado por el sistema y por el usuario.
+
+    time nombre_programa => t.espera = t.real - t.user -t.sys
+    
