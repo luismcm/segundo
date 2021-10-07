@@ -20,3 +20,19 @@ La orden time mide el tiempo de ejecución de un programa, el tiempo usado por e
 
     time nombre_programa => t.espera = t.real - t.user -t.sys
     
+# 3. Orden nice
+
+La orden nice altera el valor de prioridad por defecto de un proceso (heredado por su proceso padre). Acepta los valores desde el intervalo -20 al 19
+
+    nice -valor(€ intervalo) nombre_proceso: aumenta/decrementa en valor el valor de prioridad del proceso. El - no afecta
+    renice valor pid_of_proceso: modifica el valor durante la ejecucion del proceso
+  
+### Actividad nice
+
+- Guión
+    
+    #!/bin/bash
+    
+
+
+
