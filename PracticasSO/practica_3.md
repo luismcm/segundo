@@ -31,8 +31,25 @@ La orden nice altera el valor de prioridad por defecto de un proceso (heredado p
 
 - Guión
     
-    #!/bin/bash
-    
+        #! /bin/bash
 
+        a=0
+        declare -r MAXIMO=10000
+        while [ "$a" -ne $MAXIMO ]
+        do
+            echo $a
+            (( a++ ))
+        done
+        
+        #for (( a=0; a<$MAXIMO; a++ ))
+        do
+            echo $a
+        done
+
+- Running script in background
+
+        script.sh &
+    
+    
 
 
