@@ -52,5 +52,46 @@ La orden nice altera el valor de prioridad por defecto de un proceso (heredado p
     
 ## 4. Orden pstree
 
+Visualiza el árbol de procesos activos
+
+## 5. Orden ps
+
+Muestra la siguiente información sobre los procesos
+
+- PID: nº de identificación del proceso
+- USER: usuario que lo lanzó
+- PPID: PID del proceso padre
+- %CPU: porcentaje entre el tiempo usado realmente y el que lleva en ejecución
+- %MEM: fraccion de memoria usada
+- VSZ: tamaño virtual del proceso en KB
+- RSS: memoria real en KB
+- TTY: terminal asociada al proceso
+- STAT: estado del proceso
+    - R: running or ready
+    - S: sleeping
+    - T: sTopped
+    - D: waiting
+    - L: blocked in memory
+    
+### Actividad 3
+
+    pstree -p : muestra la jerarquía hijo/padre
+    ps --pid PID
+    Cuando tty == ? => el proceso no está asociado a ningún terminal
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
