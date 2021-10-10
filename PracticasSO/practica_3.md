@@ -108,11 +108,14 @@ Muestra estadísticas del procesador
 - %soft: tiempo en excepciones
 - %idle: cpu desocupada
 - intr/s:  nº peticiones/s
-    
-    
-    
+   
+## 4. Orden free
 
-
+Muestra el estado de la memoria RAM y SWAP
+    
+    free -m: muestra el espacio en MiB
+    free -h: muestra los datos en la mejor medida
+    free -b: muestra los datos en bytes
 
 
 
