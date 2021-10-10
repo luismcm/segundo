@@ -98,15 +98,16 @@ Muestra la siguiente información sobre los procesos
 Muestra estadísticas del procesador 
 
     mpstat intervalo n_estre
-    CPU: nº del procesador
-    %user: porcentaje de tiempo que dedica a tareas del user
-    %nice: porcentaje de uso de la CPU con tareas a nivel de usuario con prioridad “nice” 
-    %sys: porcentaje de uso para el kernel
-    %iowait: tiempo ocioso e/s
-    %irq: tiempo que gasta en interrupciones hardware
-    %soft: tiempo en excepciones
-    %idle: cpu desocupada
-    intr/s:  nº peticiones/s
+    
+- CPU: nº del procesador
+- %user: porcentaje de tiempo que dedica a tareas del user
+- %nice: porcentaje de uso de la CPU con tareas a nivel de usuario con prioridad “nice” 
+- %sys: porcentaje de uso para el kernel
+- %iowait: tiempo ocioso e/s
+- %irq: tiempo que gasta en interrupciones hardware
+- %soft: tiempo en excepciones
+- %idle: cpu desocupada
+- intr/s:  nº peticiones/s
     
     
     
