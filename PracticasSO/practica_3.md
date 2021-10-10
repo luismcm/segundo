@@ -123,9 +123,11 @@ Muestra el estado de la memoria RAM y SWAP
  
  * Procs
  
-        | r: procesos esperando   | b: en espera ininterrumpible   |
-        
+    r: procesos esperando   | b: en espera ininterrumpible  
+    
  * Memory
+    
+    
     
  * Swap
  * IO
