@@ -123,11 +123,14 @@ Muestra el estado de la memoria RAM y SWAP
  
  * Procs
  
-    r: procesos esperando | b: en espera ininterrumpible  
+    r: procesos esperando 
+    b: en espera ininterrumpible  
     
  * Memory
     
-    swpd: cantidad memoria virtual empleada (kB) | free: cantidad de memoria inactiva (kB) | buff: cantidad de memoria empleada como búferes (kB)
+    swpd: cantidad memoria virtual empleada (kB) 
+    free: cantidad de memoria inactiva (kB) 
+    buff: cantidad de memoria empleada como búferes (kB)
     
  * Swap
  
