@@ -46,10 +46,14 @@ La orden nice altera el valor de prioridad por defecto de un proceso (heredado p
             echo $a
         done
 
-- Running script in background with priority
+- Running script in background 
 
-        sh ./ejercicio.sh num_veces 1000000 &
+        sh ./ejercicio.sh num_veces &
+
+- Comprobando su prioridad inical
     
+        top -p PID
+
 ## 4. Orden pstree
 
 Visualiza el árbol de procesos activos
@@ -79,10 +83,33 @@ Muestra la siguiente información sobre los procesos
     ps --pid PID
     Cuando tty == ? => el proceso no está asociado a ningún terminal
     
+## 6. Orden top
 
+    top -p PID : muestra la info de un proceso
+    PR: prioridad
+    NI: nice value => afecta a la prioridad
+    VIRT: memoria total consumida
+    RES: memoria ram consumida
+    SHR: shared memory
+    S: estado
 
+## 7. Orden mpstat
 
+Muestra estadísticas del procesador 
 
+    mpstat intervalo n_estre
+    CPU: nº del procesador
+    %user: porcentaje de tiempo que dedica a tareas del user
+    %nice: porcentaje de uso de la CPU con tareas a nivel de usuario con prioridad “nice” 
+    %sys: porcentaje de uso para el kernel
+    %iowait: tiempo ocioso e/s
+    %irq: tiempo que gasta en interrupciones hardware
+    %soft: tiempo en excepciones
+    %idle: cpu desocupada
+    intr/s:  nº peticiones/s
+    
+    
+    
 
 
 
