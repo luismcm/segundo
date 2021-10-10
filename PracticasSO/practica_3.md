@@ -117,8 +117,18 @@ Muestra el estado de la memoria RAM y SWAP
     free -h: muestra los datos en la mejor medida
     free -b: muestra los datos en bytes
 
-
-
+## 5. Orden vmstat
+ 
+ Virtual Memory Status
+ 
+ * Procs
+ * Memory
+ * Swap
+ * IO
+ * System
+ * CPU
+ 
+    
 
 
 
