@@ -123,18 +123,47 @@ Muestra el estado de la memoria RAM y SWAP
  
  * Procs
  
-    r: procesos esperando   | b: en espera ininterrumpible  
+    r: procesos esperando | b: en espera ininterrumpible  
     
  * Memory
     
-    
+    swpd: cantidad memoria virtual empleada (kB) | free: cantidad de memoria inactiva (kB) | buff: cantidad de memoria empleada como búferes (kB)
     
  * Swap
+ 
+    si: cantidad de memoria traída del espacio de trasiego desde disco (kB/s)
+    so: cantidad de memoria trasegada al disco (kB/s)
+ 
  * IO
+
+    bi: bloques enviados a un dispositivo de bloques
+    bo: bloques recibidos desde un dispositivo de bloques
+
  * System
- * CPU
+
+    in: interrupciones/s
+    cs: cambios de contexto/s
+
  
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
