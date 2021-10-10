@@ -122,7 +122,9 @@ Muestra el estado de la memoria RAM y SWAP
  Virtual Memory Status
  
  * Procs
-   | r: procesos esperando   | b: en espera ininterrumpible   |
+ 
+        | r: procesos esperando   | b: en espera ininterrumpible   |
+        
  * Memory
     
  * Swap
