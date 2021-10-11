@@ -147,6 +147,84 @@ Muestra el estado de la memoria RAM y SWAP
     in: interrupciones/s
     cs: cambios de contexto/s
 
+## 6. Orden ls
+
+    ls -l : imprime todos los archivos en formato long enumerando los metadatos
+    ls -a : lista tb los archivos ocultos
+    ls -n : lista archivos dando información extra de su ID y de su grupo de pertenencia
+    ls -lh : adapta a formato human las medidas de información
+    ls -X : ordena alfabéticamente 
+    ls -t: ordena por fecha de modificación
+    ls -u : orddenas por fecha de acceso
+    ls -c : ordena por el status de información
+    
+### Ejercicio 8
+ 
+    ls -ltau : u junto con lt significa ordenar por fecha de acceso
+    ls -ltac : contiene el campo ctime (ultima vez que se modificaron sus permisos, propietarios y/o accesos)
+    
+## 7. Análisis de metadatos con df y du
+
+    df: permite ver la información sobre todos los SA montados en el disco
+    du ruta: contabiliza el nº de bloques de disco asignados a cada archivo de un directorio
+    
+### Ejercicio 9
+
+    du -ch /etc 2>&1 | grep -v "cannot acces" | tail -n 1 : 
+    du -c te dice el total de memoria que ocupa un directorio
+    2>&1 te muestra los errores si los hubiera por pantalla
+    grep -v : invierte el sentido de la busqueda del final al principio
+    tail -n 1: muestra la última línea 
+    
+## 8. Orden ln
+
+El comando ln es un linker entre archivos fuente y directorios/ficheros
+
+    ln -s ORIGEN DESTINO: crea un enlace simbólico
+ 
+### Ejercicio 11
+
+    ls -lL : si hay un link mostrar la info de su fichero/directorio origen
+    ls -ld : lo contrario a ls -lL
+    
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    
+    
+    
+    
+    
+    
+    
+    
+    
  
     
 
