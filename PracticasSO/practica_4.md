@@ -15,8 +15,10 @@
 
 ### Actividad 1
 
-Vamos a usar la llamada al sistema open:
+Vamos a usar la llamada sobrecargada open:
 
-    int open(const char *ruta, int flags);
-    int open(const char *ruta, int flags, mode_t modo);
+    int open(const char *ruta, int flags);                  // Abre un archivo
+    int open(const char *ruta, int flags, mode_t modo);     // Crea un archivo
+    
+También usaremos la llamada close
     
