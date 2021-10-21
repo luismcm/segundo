@@ -13,3 +13,10 @@
 
 - Cada archivo abierto tiene una posicion de lectura/escritura actual (current file offset) que inicialmente está a 0 a menos que indiquemos la opción O_APPEND cuando se abre el archivo. Podemos consultar la posición actual usando la llamada al sistema lseek 
 
+### Actividad 1
+
+Vamos a usar la llamada al sistema open:
+
+    int open(const char *ruta, int flags);
+    int open(const char *ruta, int flags, mode_t modo);
+    
