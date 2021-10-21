@@ -21,4 +21,9 @@ Vamos a usar la llamada sobrecargada open:
     int open(const char *ruta, int flags, mode_t modo);     // Crea un archivo
     
 También usaremos la llamada close
+
+    /**
+        fd es un entero pero por dentro guarada el file descriptor y el número de la dirección de memoria del archivo con el que estamos tratando
+    **/
     
+    int close(int fd)
