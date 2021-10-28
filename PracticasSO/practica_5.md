@@ -64,19 +64,19 @@ Fchmod opera con un archivo ya existente y abierto con open(). La definición de
             return 0;
          }
             
-El programa habre el archivo 1:
+* El programa habre el archivo 1:
 
     int open(const char *pathname, int flags, mode_t mode);
 
 Como podemos observar en el parámetro flags = O_CREAT|O_TRUNC|O_WRONLY, lo que hace es que si el archivo no está creado; lo crea, si existe lo pone con una longitud 0 y le pone de access mode write only. En el parámetro mode_t mode = S_IRGRP|S_IWGRP|S_IXGRP, primero le da al grupo permisos de de lectura, de escritura o de ejecución.
 
-Se repite el procedimiento con el archivo 2
+* Se repite el procedimiento con el archivo 2
 
-Para el cambio de permisos de los archivos necesitamos acceso a los atributos de los mismos. Para ello completaremos la estructura de atributos definida arriba con la función stat de la siguiente manera:
+* Para el cambio de permisos de los archivos necesitamos acceso a los atributos de los mismos. Para ello completaremos la estructura de atributos definida arriba con la función stat de la siguiente manera:
 
     int stat(const char *restrict pathname, struct stat *restrict statbuf);
     
-Ahora cambiamos los permisos del archivo con chmod:
+* Ahora cambiamos los permisos del archivo con chmod:
 
     int chmod(const char *pathname, mascara);
 
