@@ -76,4 +76,25 @@ También usaremos la llamada close
 
             return EXIT_SUCCESS;
         }
+	
+Primero el programa abre un archivo de nombre archivo con los flags O_CREAT para crear el archivo en caso de que no exista, O_TRUNC para truncar el archivo a longitud 0 en caso de que ya exista, O_WRONLY para especificar el modo escritura, S_IRUSR y S_IWUSR para garantizar permiso de lectura y escritura, respectivamente, al usuario. Imprimiendo por la salida estándar el número de error en caso de error, almacenado en errno.
+
+Luego escribimos en el archivo hasta 10B empezando por la posición a la que referencia buf1, en caso de que write() devuelva un valor distinto de 10 (el número de bytes que queremos escribir) notificamos el error en la salida de error.
+
+Ahora situamos el offset del archivo a 40B desde el inicio del fichero, flag SEEK_SET, esta opción nos permite situarnos en una posición mayor a la longitud actual del fichero, que posteriormente si realizamos una escritura, rellenará las posiciones del fichero inexistentes con el carácter nulo \0.
+
+Finalmente escribimos el buffer buff2 en el fichero.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
