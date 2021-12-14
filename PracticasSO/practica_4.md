@@ -105,9 +105,9 @@ Finalmente escribimos el buffer buff2 en el fichero.
 		char buf[BLOCK_SIZE];
 		int read_blocks(int);
 
-		int main(int argc, char *argv[]){
-  			int fd;
-  			int std_read = 1;
+	int main(int argc, char *argv[]){
+  		int fd;
+  		int std_read = 1;
   		if(argc == 1){
     			printf("Se ha seleccionado la entrada estándar como archivo de entrada\n");
     			fd = STDIN_FILENO;
