@@ -82,7 +82,7 @@ Fchmod opera con un archivo ya existente y abierto con open(). La definición de
 
     Para establecer la máscara le quitamos al archivo los permisos de ejecucion en el grupo, para ello realizaciomos la siguiente operación *atributos.st_mode &       ~S_IXGRP* después le añadimos los permisos que tenía antes haciendo un *OR a S_ISGID*
 
-
+### Ejercicio 2: Cambia los permisos de todos los archivos de un directorio
 
 
 
