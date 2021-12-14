@@ -158,9 +158,17 @@ Finalmente escribimos el buffer buff2 en el fichero.
 			if((write(fd_out, buf_w, strlen(bufw))) < 0)
 			{
 				printf("\nError en %d write", errno);
-				perror()
+				perror("\nError en el write del fichero de salida");
+				close_fd(fd_out)
+				exit(EXIT_FAILURE);
 			}
+			
+			if(count < BLOCK_SIZE)
+				eof = 1;
 		}
+		
+		close_fd(fd_out);
+		return EXIT_SUCCESS;
 		
 	}
 
