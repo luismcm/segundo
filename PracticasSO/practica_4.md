@@ -89,21 +89,21 @@ Finalmente escribimos el buffer buff2 en el fichero.
 
 
 	
-		/*
-			ejercicio2.c
-		*/
-		#include<unistd.h>
-		#include<stdio.h>
-		#include<stdlib.h>
-		#include<sys/types.h>
-		#include<sys/stat.h>
-		#include<fcntl.h>
-		#include<errno.h>
-		#include <string.h>
+	/*
+		ejercicio2.c
+	*/
+	#include<unistd.h>
+	#include<stdio.h>
+	#include<stdlib.h>
+	#include<sys/types.h>
+	#include<sys/stat.h>
+	#include<fcntl.h>
+	#include<errno.h>
+	#include <string.h>
 
-		#define BLOCK_SIZE 80
-		char buf[BLOCK_SIZE];
-		int read_blocks(int);
+	#define BLOCK_SIZE 80
+	char buf[BLOCK_SIZE];
+	int read_blocks(int);
 
 	int main(int argc, char *argv[]){
   		int fd;
@@ -136,6 +136,34 @@ Finalmente escribimos el buffer buff2 en el fichero.
 
   			return EXIT_SUCCESS;
 	}
+	
+	int read_blocks(int _fd)
+	{
+		int fd_out;
+		int count = 0;
+		int eof = 0;
+		if((fd_out=open("salida.txt", O_CREAT|O_TRUNC|O_WRONLY, S_IRUSR|S_IWRUSR)) < 0)
+		{
+			printf("\nError %d en open", errno);
+			perror("\nError en open");
+			exit(EXIT_FAILURE);
+		}
+		
+		for (int i = 0; !eof; ++i)
+		{
+			char buf_w[BLOCK_SIZE+20];
+			count = read(_fd, buf, BLOCK_SIZE);
+			sprintf(buf_w, "\nBloque %i : \n", i, count, buf);
+			
+			if((write(fd_out, buf_w, strlen(bufw))) < 0)
+			{
+				printf("\nError en %d write", errno);
+				perror()
+			}
+		}
+		
+	}
+
 
 
 
