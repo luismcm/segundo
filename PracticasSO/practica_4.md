@@ -232,7 +232,7 @@ Finalmente escribimos el buffer buff2 en el fichero.
 		return EXIT_SUCCESS;
 		}
 
-
+Mira los metadatos de los archivos pasados como parametro con lstat, guardando la información en la estructura de estado. Más tarde se comprueba el tipo de archivo con el atributo st_mode y se imprime el tipo por pantalla.
 
 
 
