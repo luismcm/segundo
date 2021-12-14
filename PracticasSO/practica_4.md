@@ -90,52 +90,52 @@ Finalmente escribimos el buffer buff2 en el fichero.
 
 	
 		/*
-ejercicio2.c
-*/
-#include<unistd.h>
-#include<stdio.h>
-#include<stdlib.h>
-#include<sys/types.h>
-#include<sys/stat.h>
-#include<fcntl.h>
-#include<errno.h>
-#include <string.h>
+			ejercicio2.c
+		*/
+		#include<unistd.h>
+		#include<stdio.h>
+		#include<stdlib.h>
+		#include<sys/types.h>
+		#include<sys/stat.h>
+		#include<fcntl.h>
+		#include<errno.h>
+		#include <string.h>
 
-#define BLOCK_SIZE 80
-char buf[BLOCK_SIZE];
-int read_blocks(int);
+		#define BLOCK_SIZE 80
+		char buf[BLOCK_SIZE];
+		int read_blocks(int);
 
-int main(int argc, char *argv[]){
-  int fd;
-  int std_read = 1;
-  if(argc == 1){
-    printf("Se ha seleccionado la entrada estándar como archivo de entrada\n");
-    fd = STDIN_FILENO;
-    read_blocks(fd);
-  }
-  else{
-    if(argc == 2){
-      if( (fd=open(argv[1], O_RDONLY)) < 0){
-        printf("\nError %d en open",errno);
-        perror("\nError en open");
-        exit(EXIT_FAILURE);
-      }
+		int main(int argc, char *argv[]){
+  			int fd;
+  			int std_read = 1;
+  		if(argc == 1){
+    			printf("Se ha seleccionado la entrada estándar como archivo de entrada\n");
+    			fd = STDIN_FILENO;
+    			read_blocks(fd);
+  		}
+  		else{
+    			if(argc == 2){
+      				if( (fd=open(argv[1], O_RDONLY)) < 0){
+        				printf("\nError %d en open",errno);
+        				perror("\nError en open");
+        				exit(EXIT_FAILURE);
+      				}
 
-      read_blocks(fd);
-      if(close(fd) < 0){
-        printf("\nError %d en close",errno);
-        perror("\nError en close");
-        exit(EXIT_FAILURE);
-      }
-    }
-    else{
-      printf("\nError, invalid number of arguments\nUso: ejercicio2 [pathname_to_file]");
-      exit(EXIT_FAILURE);
-    }
-  }
+      				read_blocks(fd);
+      				if(close(fd) < 0){
+        				printf("\nError %d en close",errno);
+        				perror("\nError en close");
+        				exit(EXIT_FAILURE);
+      				}
+    			}
+    			else{
+      				printf("\nError, invalid number of arguments\nUso: ejercicio2 [pathname_to_file]");
+      				exit(EXIT_FAILURE);
+    			}
+  		}
 
-  return EXIT_SUCCESS;
-}
+  			return EXIT_SUCCESS;
+	}
 
 
 
