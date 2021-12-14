@@ -173,7 +173,10 @@ Finalmente escribimos el buffer buff2 en el fichero.
 	}
 
 
-
+- Saca el número de bloques de un archivo:
+	
+	int size_fd = lseek(fd, 0, SEEK_END);
+	int n_blocks = size_fd / BLOCK_SIZE ; // : )
 
 
 
