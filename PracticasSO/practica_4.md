@@ -179,6 +179,14 @@ Finalmente escribimos el buffer buff2 en el fichero.
 	int n_blocks = size_fd / BLOCK_SIZE ; // : )
 
 
+### Ejercicio 3: ¿Qué hace el siguiente programa?
+
+
+
+
+
+
+
 
 
 
