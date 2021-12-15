@@ -14,7 +14,7 @@ Fchmod opera con un archivo ya existente y abierto con open(). La definición de
     int chmod(const char *path, mode_t mode);
     int fchmod(int fildes, mode_t mode);
 
-## Ejercicio 1: ¿Qué hace este programa?
+### Ejercicio 1: ¿Qué hace este programa?
 
     #include<sys/types.h>#include<unistd.h>
     #include<stdlib.h>
@@ -169,9 +169,32 @@ Fchmod opera con un archivo ya existente y abierto con open(). La definición de
           }
         }
             
+ 
+### Uso de nftw
             
-            
-            
+        #include<sys/types.h>
+        #include<sys/stat.h>
+        #include<fcntl.h>
+        #include<stdio.h>
+        #include<errno.h>
+        #include<stdlib.h>
+        #include<dirent.h>
+        #include<string.h>
+        #include <ftw.h>
+        
+        int visitar(const char* path, const struct stat* stat, int flags, struct FTW* ftw)
+        {
+            printf("\nPath: %s Modo: %o", path, stat->st_mode);
+            return 0;
+        }
+        
+        int main(int argc,char** argv)
+        {
+            if((nftw(argc >= 2 ? argv[1] : ".", visitar, 10, 0)) != 0)
+            {
+                perror("Error en nftw");
+            }
+        }
             
             
             
